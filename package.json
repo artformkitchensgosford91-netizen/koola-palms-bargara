@@ -4,5 +4,8 @@
   "private": true,
   "scripts": {
     "build": "node scripts/build.js"
+  },
+  "dependencies": {
+    "sharp": "^0.34.4"
   }
 }
