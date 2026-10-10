@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: artformkitchensgosford91-netizen/koola-palms-bargara
   branch: main
 
 media_folder: "assets/uploads"
