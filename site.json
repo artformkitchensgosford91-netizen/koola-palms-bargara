@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "eyebrow": "Koola Beach Apartments · Bargara, Queensland",
+    "headline": "Beachside calm.",
+    "headlineAccent": "Designer comfort.",
+    "lead": "A fully renovated two-bedroom coastal apartment with beautiful interiors, generous outdoor living and an easy Bargara lifestyle just moments from the beach.",
+    "mainImage": "assets/final/hero-living.jpg",
+    "secondaryImage": "assets/final/patio-dining.jpg"
+  },
+  "booking": {
+    "directUrl": "https://www.mybookingsite.io/inst/#home?propertyId=883NTUgA9bLPxqFZ6fRPuff9XCa4KkKEs3g0KAHRlTd4qaRBds3NjY1&JDRN=Y",
+    "bookingComUrl": "https://www.booking.com/hotel/au/koola-beach-apartments-bargara.html"
+  },
+  "contact": {
+    "phoneDisplay": "1800 981 815",
+    "phoneLink": "1800981815",
+    "email": "relax@koolabeach.com.au",
+    "address": "52 Johnson Street, Bargara QLD 4670"
+  },
+  "propertyGallery": [
+    {"title":"Relaxed coastal living","caption":"Open-plan comfort with the designer kitchen just beyond.","lightboxCaption":"Relaxed coastal living at Koola Palms 101.","alt":"Open-plan living room and designer kitchen inside Koola Palms Apartment 101 in Bargara","image":"assets/final/hero-living.jpg","featured":true},
+    {"title":"Designer kitchen","caption":"Island seating, quality appliances and warm natural finishes.","lightboxCaption":"A fully renovated designer kitchen.","alt":"Renovated white and timber kitchen with island bench and bar stools in Apartment 101","image":"assets/final/kitchen.jpg","featured":false},
+    {"title":"Main bedroom","caption":"Soft coastal styling, natural light and a calm place to unwind.","lightboxCaption":"A peaceful main bedroom with soft coastal styling.","alt":"Queen bedroom with soft coastal styling, ceiling fan and large window in Koola Palms Apartment 101","image":"assets/final/bedroom.jpg","featured":false},
+    {"title":"Renovated bathroom","caption":"Fresh finishes with a distinctive coastal palette.","lightboxCaption":"Fresh, beautifully finished bathroom.","alt":"Renovated bathroom with timber vanity, round mirror and pink feature tiles","image":"assets/final/bathroom.jpg","featured":false},
+    {"title":"Bathroom & laundry","caption":"Walk-in shower and convenient washer/dryer.","lightboxCaption":"Everything you need for a longer stay.","alt":"Walk-in shower and integrated washer dryer in the renovated apartment bathroom","image":"assets/final/bathroom-laundry.jpg","featured":false},
+    {"title":"Private patio","caption":"Plenty of room for alfresco meals and relaxed afternoons.","lightboxCaption":"Your own spacious outdoor retreat.","alt":"Large private ground-floor patio with dining table, bar seating and palm trees","image":"assets/final/patio-dining.jpg","featured":false},
+    {"title":"Indoor–outdoor living","caption":"Choose a sunny or shaded spot throughout the day.","lightboxCaption":"Three outdoor spaces to relax and dine.","alt":"Covered and open outdoor entertaining areas at Koola Palms Apartment 101","image":"assets/final/patio-wide.jpg","featured":false},
+    {"title":"Local visitors","caption":"Kangaroos are sometimes seen grazing across the park.","lightboxCaption":"You may even have some local visitors.","alt":"Kangaroos grazing in the park viewed from the outdoor area at Koola Palms 101","image":"assets/final/kangaroos.jpg","featured":false},
+    {"title":"Moments from the beach","caption":"See how close Apartment 101 is to the foreshore, parkland and Bargara beach.","lightboxCaption":"Aerial view showing Koola Beach Apartments just moments from the beach.","alt":"Aerial view of Koola Beach Apartments with the beach, foreshore parkland and ocean visible nearby","image":"assets/final/aerial-beach-proximity.png","featured":false}
+  ],
+  "localGallery": [
+    {"title":"The beach","caption":"A short stroll puts you on the sand with the ocean in front of you.","lightboxCaption":"The beach is just a short stroll away.","alt":"Sandy beach and ocean at Bargara with pandanus trees beside the beach access","image":"assets/final/beach.jpg"},
+    {"title":"Beachside coffee","caption":"One of the easiest ways to start a Bargara morning.","lightboxCaption":"Morning coffee by the ocean.","alt":"Two takeaway coffees overlooking the beach at Bargara","image":"assets/final/beach-coffee.jpg"},
+    {"title":"The Windmill Café","caption":"Relaxed courtyard dining and a favourite local stop.","lightboxCaption":"Discover Bargara's relaxed café scene.","alt":"Outdoor courtyard dining at The Windmill Café in Bargara","image":"assets/final/windmill-cafe.jpg"},
+    {"title":"Tinaberries","caption":"Fresh strawberries and a very worthwhile ice-cream stop.","lightboxCaption":"A local favourite — fresh strawberry ice cream.","alt":"Fresh strawberry ice cream topped with a strawberry at Tinaberries near Bargara","image":"assets/final/tinaberries.jpg"},
+    {"title":"Bargara Beach Hotel","caption":"A nearby option for relaxed drinks and dining.","lightboxCaption":"Drinks and dining in Bargara.","alt":"Exterior of Bargara Beach Hotel surrounded by palms and tropical landscaping","image":"assets/final/bargara-hotel.jpg"},
+    {"title":"Botanic Gardens","caption":"A peaceful regional attraction when you feel like exploring further.","lightboxCaption":"Explore a little further.","alt":"Formal gardens, tropical palms and landscaped pathways at the Bundaberg Botanic Gardens","image":"assets/final/botanic-gardens.jpg"}
+  ]
+}
