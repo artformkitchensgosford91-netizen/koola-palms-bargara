@@ -19,6 +19,39 @@ collections:
         file: "content/site.json"
         format: "json"
         fields:
+          - label: "Website optimisation"
+            name: "seo"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "SEO page title", name: "title", widget: "string", hint: "Aim for roughly 50–60 characters." }
+              - { label: "Google meta description", name: "description", widget: "text", hint: "Aim for roughly 140–160 characters." }
+              - { label: "Canonical URL", name: "canonicalUrl", widget: "string" }
+              - { label: "Social share title", name: "socialTitle", widget: "string" }
+              - { label: "Social share description", name: "socialDescription", widget: "text" }
+              - { label: "Social share image", name: "socialImage", widget: "image" }
+              - { label: "Google Search Console verification code", name: "searchConsoleVerification", widget: "string", required: false, hint: "Paste only the content value from Google's verification meta tag." }
+          - label: "Analytics & conversion tracking"
+            name: "analytics"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Google Analytics 4 Measurement ID", name: "ga4MeasurementId", widget: "string", required: false, hint: "Example: G-XXXXXXXXXX. Leave blank until GA4 is created." }
+          - label: "Property search data"
+            name: "property"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Property name", name: "name", widget: "string" }
+              - { label: "Street address", name: "streetAddress", widget: "string" }
+              - { label: "Suburb / locality", name: "addressLocality", widget: "string" }
+              - { label: "State", name: "addressRegion", widget: "string" }
+              - { label: "Postcode", name: "postalCode", widget: "string" }
+              - { label: "Country code", name: "addressCountry", widget: "string", default: "AU" }
+              - { label: "Bedrooms", name: "bedrooms", widget: "number", value_type: "int", min: 1 }
+              - { label: "Maximum guests", name: "guests", widget: "number", value_type: "int", min: 1 }
+              - { label: "Latitude", name: "latitude", widget: "string", required: false }
+              - { label: "Longitude", name: "longitude", widget: "string", required: false }
           - label: "Homepage hero"
             name: "hero"
             widget: "object"

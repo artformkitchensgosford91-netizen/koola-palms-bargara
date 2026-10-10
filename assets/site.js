@@ -71,3 +71,32 @@ lightbox?.addEventListener('click', event => {
 window.addEventListener('keydown', event => {
   if (event.key === 'Escape' && lightbox && !lightbox.hidden) closeLightbox();
 });
+
+
+function koolaTrackEvent(name, params = {}) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', name, params);
+  }
+}
+
+document.addEventListener('click', event => {
+  if (event.target.closest('#cms-direct-booking')) {
+    koolaTrackEvent('booking_click', { booking_channel: 'direct' });
+    return;
+  }
+  if (event.target.closest('#cms-booking-com')) {
+    koolaTrackEvent('booking_click', { booking_channel: 'booking_com' });
+    return;
+  }
+  if (event.target.closest('.cms-contact-phone')) {
+    koolaTrackEvent('contact_click', { contact_method: 'phone' });
+    return;
+  }
+  if (event.target.closest('.cms-contact-email')) {
+    koolaTrackEvent('contact_click', { contact_method: 'email' });
+  }
+});
+
+videoPlay?.addEventListener('click', () => {
+  koolaTrackEvent('video_play', { video_name: 'apartment_walkthrough' });
+});
