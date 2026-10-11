@@ -24,6 +24,7 @@
     var img = document.createElement("img");
     img.src = normalizePath(item.image);
     img.alt = item.alt || item.title || "Koola Palms Bargara";
+    img.decoding = "async";
     if (!isFeatured) img.loading = "lazy";
 
     var copy = document.createElement("div");

@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/build.js"
-  },
-  "dependencies": {
-    "sharp": "^0.34.4"
+    "build": "node scripts/optimise-meta.js"
   }
 }
