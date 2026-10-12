@@ -63,7 +63,7 @@ const schema = {
   },
   "containsPlace": {
     "@type": "Accommodation",
-    "additionalType": "EntirePlace",
+    "additionalType": "https://schema.org/Apartment",
     "numberOfBedrooms": Number(property.bedrooms || 2),
     "occupancy": {
       "@type": "QuantitativeValue",

@@ -1,9 +1,9 @@
 {
   "hero": {
-    "eyebrow": "Koola Beach Apartments · Bargara, Queensland",
-    "headline": "Beachside calm.",
-    "headlineAccent": "Designer comfort.",
-    "lead": "A fully renovated two-bedroom coastal apartment with beautiful interiors, generous outdoor living and an easy Bargara lifestyle just moments from the beach.",
+    "eyebrow": "Koola Beach Apartments · Apartment 101 · Bargara, Queensland",
+    "headline": "Koola Palms Apartment 101.",
+    "headlineAccent": "Bargara beach accommodation.",
+    "lead": "Stay in a fully renovated two-bedroom ground-floor holiday apartment at Koola Beach Apartments Bargara, with designer interiors, private outdoor living, pool and spa access, and the beach close by.",
     "mainImage": "assets/final/hero-living.jpg",
     "secondaryImage": "assets/final/patio-dining.jpg"
   },
@@ -136,11 +136,11 @@
     }
   ],
   "seo": {
-    "title": "Koola Palms Bargara | Apartment 101 Beach Accommodation",
-    "description": "Stay at Koola Palms Apartment 101 in Bargara: a fully renovated 2-bedroom ground-floor apartment near the beach, Mon Repos and the Southern Great Barrier Reef.",
+    "title": "Koola Palms Apartment 101 | Bargara Beach Accommodation",
+    "description": "Stay at Koola Palms Apartment 101 at Koola Beach Apartments Bargara: a renovated 2-bedroom ground-floor holiday apartment near the beach and Mon Repos.",
     "canonicalUrl": "https://koolapalmsbargara.au/",
-    "socialTitle": "Koola Palms Bargara – Apartment 101",
-    "socialDescription": "A fully renovated two-bedroom coastal apartment in Bargara with designer interiors, private outdoor living and the beach close by.",
+    "socialTitle": "Koola Palms Apartment 101 – Bargara Beach Accommodation",
+    "socialDescription": "A fully renovated two-bedroom ground-floor holiday apartment at Koola Beach Apartments Bargara, with private outdoor living, pool and spa access, and the beach close by.",
     "socialImage": "assets/final/hero-living.jpg",
     "searchConsoleVerification": ""
   },
