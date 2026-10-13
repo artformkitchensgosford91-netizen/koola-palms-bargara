@@ -81,19 +81,19 @@ function koolaTrackEvent(name, params = {}) {
 
 document.addEventListener('click', event => {
   if (event.target.closest('#cms-direct-booking')) {
-    koolaTrackEvent('booking_click', { booking_channel: 'direct' });
+    koolaTrackEvent('direct_booking_click', { booking_channel: 'direct' });
     return;
   }
   if (event.target.closest('#cms-booking-com')) {
-    koolaTrackEvent('booking_click', { booking_channel: 'booking_com' });
+    koolaTrackEvent('booking_com_click', { booking_channel: 'booking_com' });
     return;
   }
   if (event.target.closest('.cms-contact-phone')) {
-    koolaTrackEvent('contact_click', { contact_method: 'phone' });
+    koolaTrackEvent('phone_click', { contact_method: 'phone' });
     return;
   }
   if (event.target.closest('.cms-contact-email')) {
-    koolaTrackEvent('contact_click', { contact_method: 'email' });
+    koolaTrackEvent('email_click', { contact_method: 'email' });
   }
 });
 
