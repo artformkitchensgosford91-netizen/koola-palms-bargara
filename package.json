@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node scripts/optimise-meta.js"
+    "build": "node scripts/optimise-meta.js",
+    "test": "node scripts/test-tracking.js"
   }
 }
+
