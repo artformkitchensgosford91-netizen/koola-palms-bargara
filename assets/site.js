@@ -79,24 +79,47 @@ function koolaTrackEvent(name, params = {}) {
   }
 }
 
-document.addEventListener('click', event => {
-  if (event.target.closest('#cms-direct-booking')) {
-    koolaTrackEvent('direct_booking_click', { booking_channel: 'direct' });
+// One delegated implementation for booking interest and contact intent.
+// These clicks do not establish an enquiry submission or a confirmed reservation.
+function trackBookingEnquiryClick(event) {
+  if (event.defaultPrevented || (event.type === 'auxclick' && event.button !== 1)) return;
+  const anchor = event.target?.closest?.('a[href]');
+  if (!anchor) return;
+
+  const href = anchor.getAttribute('href') || '';
+  const params = {
+    booking_property: 'koola_palms_apartment_101',
+    interaction_location: anchor.closest('#book') ? 'booking' : 'contact',
+    transport_type: 'beacon'
+  };
+  let name;
+  if (anchor.id === 'cms-direct-booking') {
+    name = 'direct_booking_click';
+    params.booking_channel = 'direct';
+    params.intent_type = 'booking_interest';
+  } else if (anchor.id === 'cms-booking-com') {
+    name = 'booking_com_click';
+    params.booking_channel = 'booking_com';
+    params.intent_type = 'booking_interest';
+  } else if (/^tel:/i.test(href)) {
+    name = 'phone_click';
+    params.contact_method = 'phone';
+    params.intent_type = 'contact_interest';
+  } else if (/^mailto:/i.test(href)) {
+    name = 'email_click';
+    params.contact_method = 'email';
+    params.intent_type = 'contact_interest';
+  } else {
     return;
   }
-  if (event.target.closest('#cms-booking-com')) {
-    koolaTrackEvent('booking_com_click', { booking_channel: 'booking_com' });
-    return;
-  }
-  if (event.target.closest('.cms-contact-phone')) {
-    koolaTrackEvent('phone_click', { contact_method: 'phone' });
-    return;
-  }
-  if (event.target.closest('.cms-contact-email')) {
-    koolaTrackEvent('email_click', { contact_method: 'email' });
-  }
-});
+  // Do not send full URLs, email subjects/bodies or phone numbers as parameters.
+  // Keep normal browser navigation, new tabs and contact applications intact.
+  koolaTrackEvent(name, params);
+}
+document.addEventListener('click', trackBookingEnquiryClick);
+document.addEventListener('auxclick', trackBookingEnquiryClick);
 
 videoPlay?.addEventListener('click', () => {
   koolaTrackEvent('video_play', { video_name: 'apartment_walkthrough' });
 });
+
