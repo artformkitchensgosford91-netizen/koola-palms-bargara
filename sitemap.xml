@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://koolapalmsbargara.au/</loc>
+    <image:image>
+      <image:loc>https://koolapalmsbargara.au/assets/final/hero-living.jpg</image:loc>
+      <image:title>Renovated open-plan living room and designer kitchen in Koola Palms Apartment 101, Bargara</image:title>
+    </image:image>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>

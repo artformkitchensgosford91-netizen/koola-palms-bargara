@@ -36,12 +36,13 @@ const description = seo.description || "Stay at Koola Palms Apartment 101 in Bar
 const socialTitle = seo.socialTitle || title;
 const socialDescription = seo.socialDescription || description;
 const socialImage = absUrl(seo.socialImage || hero.mainImage || "assets/final/hero-living.jpg", canonical);
+const primaryImageAlt = "Renovated open-plan living room and designer kitchen in Koola Palms Apartment 101, Bargara";
 const searchVerification = String(seo.searchConsoleVerification || "").trim();
 
-const images = gallery
-  .map(item => item && item.image ? absUrl(item.image, canonical) : null)
-  .filter(Boolean)
-  .slice(0, 12);
+const images = [
+  socialImage,
+  ...gallery.map(item => item && item.image ? absUrl(item.image, canonical) : null)
+].filter(Boolean).filter((value, index, array) => array.indexOf(value) === index).slice(0, 12);
 
 const schema = {
   "@context": "https://schema.org",
@@ -50,7 +51,26 @@ const schema = {
   "name": property.name || "Koola Palms Bargara – Apartment 101",
   "description": description,
   "url": canonical,
-  "image": images.length ? images : [socialImage],
+  "image": [
+    {
+      "@type": "ImageObject",
+      "@id": canonical + "#primaryimage",
+      "url": socialImage,
+      "contentUrl": socialImage,
+      "name": primaryImageAlt,
+      "caption": primaryImageAlt,
+      "representativeOfPage": true
+    },
+    ...images.filter(image => image !== socialImage)
+  ],
+  "subjectOf": {
+    "@type": "WebPage",
+    "@id": canonical + "#webpage",
+    "url": canonical,
+    "name": title,
+    "description": description,
+    "primaryImageOfPage": { "@id": canonical + "#primaryimage" }
+  },
   "telephone": contact.phoneDisplay || "",
   "email": contact.email || "",
   "address": {
@@ -108,13 +128,15 @@ const seoBlock = [
   '  <meta property="og:description" content="' + esc(socialDescription) + '" />',
   '  <meta property="og:url" content="' + esc(canonical) + '" />',
   '  <meta property="og:image" content="' + esc(socialImage) + '" />',
-  '  <meta property="og:image:alt" content="Koola Palms Apartment 101 in Bargara" />',
+  '  <meta property="og:image:alt" content="' + esc(primaryImageAlt) + '" />',
   '  <meta property="og:site_name" content="Koola Palms Bargara" />',
   '  <meta name="twitter:card" content="summary_large_image" />',
   '  <meta name="twitter:title" content="' + esc(socialTitle) + '" />',
   '  <meta name="twitter:description" content="' + esc(socialDescription) + '" />',
   '  <meta name="twitter:image" content="' + esc(socialImage) + '" />',
+  '  <meta name="twitter:image:alt" content="' + esc(primaryImageAlt) + '" />',
   '  <script type="application/ld+json">' + JSON.stringify(schema).replace(/</g, "\\u003c") + "</script>",
+  '  <link rel="preload" as="image" href="' + esc(socialImage) + '" fetchpriority="high" />',
   "<!-- SEO:END -->"
 ].filter(Boolean).join("\n");
 
@@ -149,9 +171,13 @@ fs.writeFileSync(path.join(root, "robots.txt"), [
 
 fs.writeFileSync(path.join(root, "sitemap.xml"), [
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
   "  <url>",
   "    <loc>" + esc(canonical) + "</loc>",
+  "    <image:image>",
+  "      <image:loc>" + esc(socialImage) + "</image:loc>",
+  "      <image:title>" + esc(primaryImageAlt) + "</image:title>",
+  "    </image:image>",
   "    <lastmod>" + today + "</lastmod>",
   "    <changefreq>weekly</changefreq>",
   "    <priority>1.0</priority>",
