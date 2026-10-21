@@ -49,7 +49,8 @@ const schema = {
   "@type": "VacationRental",
   "identifier": "koola-palms-apartment-101",
   "name": property.name || "Koola Palms Bargara – Apartment 101",
-  "description": description,
+  "description": "Fully renovated, designer-appointed two-bedroom ground-floor holiday apartment in Bargara, Queensland, with two queen beds, a living room sofa bed, designer kitchen and private outdoor entertaining overlooking Nelson Park. Resort pool and spa access; Bargara Beach, cafes and the Surf Club are a short walk away. Sleeps up to five guests.",
+  "additionalType": "Apartment",
   "url": canonical,
   "image": [
     {
@@ -83,7 +84,12 @@ const schema = {
   },
   "containsPlace": {
     "@type": "Accommodation",
-    "additionalType": "https://schema.org/Apartment",
+    "additionalType": "EntirePlace",
+    "numberOfBathroomsTotal": 1,
+    "bed": [
+      { "@type": "BedDetails", "numberOfBeds": 2, "typeOfBed": "Queen" },
+      { "@type": "BedDetails", "numberOfBeds": 1, "typeOfBed": "SofaBed" }
+    ],
     "numberOfBedrooms": Number(property.bedrooms || 2),
     "occupancy": {
       "@type": "QuantitativeValue",
