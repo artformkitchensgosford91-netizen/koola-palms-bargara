@@ -89,6 +89,38 @@
       "alt": "Aerial view of Koola Beach Apartments with the beach, foreshore parkland and ocean visible nearby",
       "image": "assets/final/aerial-beach-proximity.png",
       "featured": false
+    },
+    {
+      "title": "Thoughtful details",
+      "caption": "A welcoming entrance with a touch of coastal character.",
+      "lightboxCaption": "A welcoming entrance with a touch of coastal character.",
+      "alt": "Wall hooks with a hat and woven bag beside the kitchen in Koola Palms Apartment 101",
+      "image": "assets/final/inside-1-entry-detail.webp",
+      "featured": false
+    },
+    {
+      "title": "Everyday essentials",
+      "caption": "Glassware, mugs and kitchen appliances ready for your stay.",
+      "lightboxCaption": "Glassware, mugs and kitchen appliances ready for your stay.",
+      "alt": "Kitchen shelves with glasses and mugs above a coffee machine, kettle and toaster in Apartment 101",
+      "image": "assets/final/inside-4-kitchen-amenities.webp",
+      "featured": false
+    },
+    {
+      "title": "Your morning coffee",
+      "caption": "A Nespresso coffee machine for an easy start to the day.",
+      "lightboxCaption": "A Nespresso coffee machine for an easy start to the day.",
+      "alt": "Nespresso coffee machine and coffee pods on the timber kitchen bench in Koola Palms Apartment 101",
+      "image": "assets/final/inside-7-coffee-station.webp",
+      "featured": false
+    },
+    {
+      "title": "Koola Beach at dusk",
+      "caption": "An evening view of the apartment building and its coastal setting.",
+      "lightboxCaption": "An evening view of the apartment building and its coastal setting.",
+      "alt": "Koola Beach Apartments building and palm trees at dusk with a colourful evening sky",
+      "image": "assets/final/outside-building-1-dusk.webp",
+      "featured": false
     }
   ],
   "localGallery": [
