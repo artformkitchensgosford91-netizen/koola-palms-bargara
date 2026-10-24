@@ -52,7 +52,7 @@ button, input, textarea, select { font: inherit; }
 .main-nav > a:not(.nav-cta):hover::after { right:0; }
 .nav-cta { padding: 12px 18px; border: 1px solid var(--ink); border-radius: 999px; transition: .2s ease; }
 .nav-cta:hover { background: var(--ink); color: var(--paper); }
-.nav-toggle { display:none; border:0; background:transparent; color:var(--ink); }
+.nav-toggle { display:none; min-width:44px; min-height:44px; border:0; background:transparent; color:var(--ink); }
 
 .hero {
   display: grid;
