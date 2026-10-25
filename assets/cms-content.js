@@ -22,6 +22,10 @@
     link.setAttribute("data-caption", item.lightboxCaption || item.caption || item.title || "");
 
     var img = document.createElement("img");
+    if (Number.isInteger(item.width) && item.width > 0 && Number.isInteger(item.height) && item.height > 0) {
+      img.width = item.width;
+      img.height = item.height;
+    }
     img.src = normalizePath(item.image);
     img.alt = item.alt || item.title || "Koola Palms Bargara";
     img.decoding = "async";
