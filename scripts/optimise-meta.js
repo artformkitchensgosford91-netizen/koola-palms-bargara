@@ -189,7 +189,7 @@ fs.writeFileSync(path.join(root, "sitemap.xml"), [
   "    <priority>1.0</priority>",
   "  </url>",
   "  <url>",
-  "    <loc>" + esc(canonical + "bargara-holiday-apartment.html") + "</loc>",
+  "    <loc>" + esc(canonical + "bargara-holiday-apartment") + "</loc>",
   "    <lastmod>" + today + "</lastmod>",
   "    <changefreq>monthly</changefreq>",
   "    <priority>0.8</priority>",

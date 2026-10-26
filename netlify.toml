@@ -29,3 +29,10 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
     X-Frame-Options = "SAMEORIGIN"
+
+# Preserve existing links while using one public apartment page address.
+[[redirects]]
+  from = "/bargara-holiday-apartment.html"
+  to = "/bargara-holiday-apartment"
+  status = 301
+  force = true
