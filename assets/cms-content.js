@@ -26,10 +26,11 @@
       img.width = item.width;
       img.height = item.height;
     }
+    // Gallery images are below the hero; set loading before the source.
+    img.loading = "lazy";
+    img.decoding = "async";
     img.src = normalizePath(item.image);
     img.alt = item.alt || item.title || "Koola Palms Bargara";
-    img.decoding = "async";
-    if (!isFeatured) img.loading = "lazy";
 
     var copy = document.createElement("div");
     copy.className = "photo-copy";

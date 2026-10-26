@@ -218,7 +218,7 @@ async function main() {
       const image = webpPath(item.image);
       return [
         '        <a class="photo-card' + (featured ? " photo-feature" : "") + ' reveal" href="' + esc(image) + '" data-lightbox data-caption="' + esc(item.lightboxCaption || item.caption || item.title || "") + '">',
-        '          <img src="' + esc(image) + '" alt="' + esc(item.alt || item.title || "Koola Palms Bargara") + '"' + dimensionsFor(imageMeta, image) + (featured ? "" : ' loading="lazy"') + ' decoding="async" />',
+        '          <img src="' + esc(image) + '" alt="' + esc(item.alt || item.title || "Koola Palms Bargara") + '"' + dimensionsFor(imageMeta, image) + ' loading="lazy"' + ' decoding="async" />',
         '          <div class="photo-copy"><h3>' + esc(item.title || "") + '</h3><p>' + esc(item.caption || "") + "</p></div>",
         "        </a>"
       ].join("\n");
