@@ -183,6 +183,15 @@ h2 { font-size: clamp(40px, 5vw, 72px); line-height: 1.02; margin-bottom: 26px; 
 .section-heading .eyebrow { margin-top:10px; }
 .section-heading h2 { max-width: 920px; margin-bottom:0; }
 .section-heading.compact { margin-bottom:38px; }
+
+.guest-faq { background: var(--paper); }
+.faq-list { max-width: 1000px; margin-inline: auto; }
+.faq-list details { border-top: 1px solid var(--line); padding: 24px 0; }
+.faq-list details:last-child { border-bottom: 1px solid var(--line); }
+.faq-list summary { cursor: pointer; font-size: 20px; font-weight: 600; padding: 4px 0; }
+.faq-list summary:focus-visible { outline: 2px solid var(--olive-deep); outline-offset: 6px; }
+.faq-list p { max-width: 780px; margin: 16px 0 0; color: var(--muted); }
+
 .intro { border-top:1px solid var(--line); }
 .intro-grid { display:grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 8vw, 120px); }
 .large-copy { font-family:Georgia, serif; font-size: clamp(28px, 3vw, 44px); line-height:1.16; margin-top:0; }
@@ -923,6 +932,31 @@ footer { display:flex; justify-content:space-between; align-items:center; gap:25
           <div class="photo-copy"><h3>Botanic Gardens</h3><p>A peaceful regional attraction when you feel like exploring further.</p></div>
         </a>
         <!-- CMS_LOCAL_GALLERY_END -->
+      </div>
+    </section>
+
+    <section class="guest-faq section" id="questions" aria-labelledby="guest-faq-heading">
+      <div class="section-heading compact reveal">
+        <div class="eyebrow">BEFORE YOU BOOK</div>
+        <h2 id="guest-faq-heading">A few things you might like to know.</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details>
+          <summary>How many guests can stay in Apartment 101?</summary>
+          <p>The two-bedroom apartment sleeps up to five guests, with a queen bed in each bedroom and a sofa bed in the living room. For a fifth guest, confirm the sofa-bed arrangement and any extra charges with the onsite managers before payment.</p>
+        </details>
+        <details>
+          <summary>Can we book just one bedroom?</summary>
+          <p>Yes. The one-bedroom rate is for up to two guests sharing one queen bedroom. You still have exclusive use of Apartment 101, including the kitchen, living areas, bathroom, laundry and private outdoor spaces. The second bedroom is closed for your stay.</p>
+        </details>
+        <details>
+          <summary>How do we make sure we book Apartment 101?</summary>
+          <p>Use the direct booking link below to open the dedicated Koola Palms 101 page on the Koola Beach Apartments website, then choose “Book as 1 bedroom” or “Book as 2 bedroom”. On Booking.com, look for “One-Bedroom Superior Apartment” or “Two-Bedroom Superior Apartment”. Confirm Apartment 101, your bedroom option and guest numbers with the resident managers before payment.</p>
+        </details>
+        <details>
+          <summary>Is the apartment on the ground floor, and can we use the pool?</summary>
+          <p>Yes. Apartment 101 is on the ground floor, with a private patio overlooking parkland. Guests have access to the Koola Beach Apartments swimming pool, spa and BBQ area, plus basement parking with lift access. The beach is a short walk away.</p>
+        </details>
       </div>
     </section>
 
