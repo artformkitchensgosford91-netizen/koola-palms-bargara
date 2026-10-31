@@ -17,6 +17,28 @@
 :root{--ink:#283026;--paper:#f4f0e8;--olive:#4e5943;--muted:#626a60}
 *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.65}a{color:inherit}header{display:flex;align-items:center;justify-content:space-between;padding:20px clamp(22px,6vw,90px);background:#fffdf9;border-bottom:1px solid #ddd5c7;gap:20px}header a{font-size:14px}.brand{font-family:Georgia,serif;font-size:22px;text-decoration:none}main{max-width:1250px;margin:auto;padding:0 24px}.hero{display:grid;grid-template-columns:1fr 1fr;gap:clamp(25px,5vw,75px);align-items:center;padding:90px 0}.hero img{width:100%;border-radius:24px;aspect-ratio:4/3;object-fit:cover}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-weight:bold;font-size:12px;color:var(--olive)}h1,h2{font-family:Georgia,serif;font-weight:normal;line-height:1.12}h1{font-size:clamp(40px,5vw,72px)}h2{font-size:clamp(30px,3.8vw,50px)}p{color:#4c544a}.cta{display:inline-block;margin:10px 12px 8px 0;padding:15px 23px;background:var(--ink);color:white;border-radius:30px;text-decoration:none;font-weight:600}.cta.alt{background:transparent;color:var(--ink);border:1px solid var(--ink)}section{margin-bottom:85px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:28px;background:#fffdf9;border:1px solid #e3ded5;border-radius:18px}.feature h3{margin-top:0}.photo{width:100%;border-radius:20px;max-height:480px;object-fit:cover}.book{padding:42px;background:#e8e6dc;border-radius:22px}.small{font-size:14px}.muted{color:var(--muted)}footer{padding:35px 6vw;background:#fffdf9;border-top:1px solid #ddd5c7}.cta:focus-visible,a:focus-visible{outline:3px solid #8c916b;outline-offset:3px}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding:45px 0}.grid{grid-template-columns:1fr}section{margin-bottom:55px}.book{padding:24px}header{flex-wrap:wrap}}
+
+/* Mobile-first booking choices for the dedicated apartment page */
+.booking-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:24px 0}
+.booking-choice{background:#fffdf9;border:1px solid #d6d2c7;border-radius:16px;padding:20px}
+.booking-choice h3{margin:0 0 8px;font-family:Georgia,serif;font-weight:400;font-size:24px}
+.booking-choice p{margin:0;font-size:15px}
+.booking-actions{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+.booking-actions .cta{margin:0;text-align:center}
+.mobile-book-bar{display:none}
+@media(max-width:760px){
+  .hero{padding:35px 0 24px;gap:22px}
+  .hero h1{font-size:clamp(37px,10vw,52px)}
+  .hero .cta{min-height:48px;text-align:center}
+  .booking-choices{grid-template-columns:1fr;gap:12px}
+  .booking-choice{padding:18px}
+  .booking-actions{display:grid;grid-template-columns:1fr}
+  .booking-actions .cta{display:flex;align-items:center;justify-content:center;min-height:52px}
+  .book{scroll-margin-top:12px}
+  body{padding-bottom:76px}
+  .mobile-book-bar{display:flex;position:fixed;z-index:30;bottom:0;left:0;right:0;padding:10px max(16px,env(safe-area-inset-left)) calc(10px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-right));background:#fffdf9;box-shadow:0 -4px 24px rgba(25,30,20,.15)}
+  .mobile-book-bar a{width:100%;min-height:48px;display:flex;align-items:center;justify-content:center;background:var(--ink);color:#fff;text-decoration:none;border-radius:28px;font-weight:700}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Two-Bedroom Holiday Apartment in Bargara","url":"https://koolapalmsbargara.au/bargara-holiday-apartment","about":{"@type":"VacationRental","identifier":"koola-palms-apartment-101","name":"Koola Palms Apartment 101","description":"Fully renovated, designer-appointed two-bedroom ground-floor holiday apartment in Bargara, Queensland, with two queen beds, a living room sofa bed, designer kitchen and private outdoor entertaining overlooking Nelson Park. Resort pool and spa access; Bargara Beach, cafes and the Surf Club are a short walk away. Sleeps up to five guests.","url":"https://koolapalmsbargara.au/","image":["https://koolapalmsbargara.au/assets/final/hero-living.webp","https://koolapalmsbargara.au/assets/final/kitchen.webp","https://koolapalmsbargara.au/assets/final/DSC_2041_optimised.webp","https://koolapalmsbargara.au/assets/final/bathroom.webp","https://koolapalmsbargara.au/assets/final/bathroom-laundry.webp","https://koolapalmsbargara.au/assets/final/patio-dining.webp","https://koolapalmsbargara.au/assets/final/patio-wide.webp","https://koolapalmsbargara.au/assets/final/aerial-beach-proximity.webp"],"geo":{"@type":"GeoCoordinates","latitude":-24.810655,"longitude":152.456385},"address":{"@type":"PostalAddress","streetAddress":"52 Johnson Street","addressLocality":"Bargara","addressRegion":"QLD","postalCode":"4670","addressCountry":"AU"},"containsPlace":{"@type":"Accommodation","additionalType":"EntirePlace","numberOfBedrooms":2,"occupancy":{"@type":"QuantitativeValue","value":5},"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Kitchen","value":true},{"@type":"LocationFeatureSpecification","name":"Laundry","value":true},{"@type":"LocationFeatureSpecification","name":"Swimming pool","value":true},{"@type":"LocationFeatureSpecification","name":"Spa","value":true},{"@type":"LocationFeatureSpecification","name":"Wi-Fi","value":true},{"@type":"LocationFeatureSpecification","name":"Air conditioning","value":true},{"@type":"LocationFeatureSpecification","name":"Parking","value":true}],"numberOfBathroomsTotal":1,"bed":[{"@type":"BedDetails","numberOfBeds":2,"typeOfBed":"Queen"},{"@type":"BedDetails","numberOfBeds":1,"typeOfBed":"SofaBed"}]},"additionalType":"Apartment"}}</script>
 </head>
@@ -41,14 +63,16 @@
 <article class="feature"><h3>Know exactly what you're booking</h3><p>Apartment 101 is a specific renovated apartment within the wider Koola Beach Apartments complex. Room names differ by booking channel. Use the instructions below and confirm Apartment 101 with the resident managers before payment.</p></article>
 </div><p><a href="/#gallery">Explore more Apartment 101 photos and the apartment walkthrough →</a></p></section>
 <section class="book" id="availability"><div class="eyebrow">Book the apartment you've seen</div><h2>Check your Bargara holiday dates.</h2><p><strong>Important:</strong> Koola Beach Apartments has different apartment categories. Use the room name for your chosen booking channel and confirm <strong>Apartment 101</strong> with the resident managers before payment.</p>
-<p><strong>Book direct:</strong> Open the dedicated Koola Palms 101 page on the Koola Beach Apartments website. Choose “Book as 1 bedroom” for one queen bedroom, with the second bedroom closed, or “Book as 2 bedroom” for both queen bedrooms. Each button opens the matching booking option.</p>
+<p><strong>Choose your bedroom option:</strong> Both options are for the same Apartment 101. Select the matching booking option on the Koola Beach Apartments page.</p>
+<div class="booking-choices" aria-label="Bedroom booking options"><div class="booking-choice"><h3>1 bedroom</h3><p>One queen bedroom for up to two guests. The second bedroom remains closed, with exclusive use of the apartment’s living areas and facilities.</p></div><div class="booking-choice"><h3>2 bedrooms</h3><p>Both queen bedrooms. For a fifth guest, confirm sofa-bed availability and any additional charges with the resident managers.</p></div></div>
 <p><strong>Booking.com:</strong> For both bedrooms, choose “Two-Bedroom Superior Apartment”. For the one-bedroom rate, choose “One-Bedroom Superior Apartment”; the second bedroom is closed.</p>
 <p>Confirm your bedroom option and guest numbers before payment. For five guests, confirm the sofa-bed arrangement and any extra charges with the resident managers.</p>
-<p><a class="cta" id="cms-direct-booking" href="https://koolabeach.com.au/apartments-and-bookings-2/koola-palms-101/" target="_blank" rel="noopener">View Apartment 101 &amp; book direct ↗</a>
-<a class="cta alt" id="cms-booking-com" href="https://www.booking.com/hotel/au/koola-beach-apartments-bargara.html" target="_blank" rel="noopener">Booking.com ↗</a></p>
+<div class="booking-actions"><a class="cta" id="cms-direct-booking" href="https://koolabeach.com.au/apartments-and-bookings-2/koola-palms-101/" target="_blank" rel="noopener">View Apartment 101 &amp; book direct ↗</a>
+<a class="cta alt" id="cms-booking-com" href="https://www.booking.com/hotel/au/koola-beach-apartments-bargara.html" target="_blank" rel="noopener">Booking.com ↗</a></div>
 <p class="small">Need confirmation? Call <a class="cms-contact-phone" href="tel:1800981815">1800 981 815</a> or email <a class="cms-contact-email" href="mailto:relax@koolabeach.com.au">relax@koolabeach.com.au</a> and ask for Koola Palms Apartment 101.</p>
 </section>
 </main>
+<div class="mobile-book-bar"><a href="#availability" aria-label="Jump to booking options for Apartment 101">Check dates · Apartment 101</a></div>
 <footer><a href="/">Koola Palms Apartment 101 homepage</a> · Bargara, Queensland</footer>
 <script src="/assets/site.js?v=20261015"></script>
 </body></html>
