@@ -286,6 +286,22 @@ h2 { font-size: clamp(40px, 5vw, 72px); line-height: 1.02; margin-bottom: 26px; 
 .review-score span { max-width:130px; font-size:12px; text-transform:uppercase; letter-spacing:.1em; color:rgba(255,255,255,.7); }
 blockquote { margin:0; font-family:Georgia,serif; font-size:clamp(24px,2.5vw,38px); line-height:1.2; }
 
+
+/* Guest reviews specific to Apartment 101 */
+.guest-reviews { background:#f8f5ef; padding-top:68px; padding-bottom:74px; }
+.guest-reviews .reviews-heading { max-width:720px; margin-bottom:26px; }
+.guest-reviews .reviews-heading h2 { font-family:Georgia,serif; font-weight:400; font-size:clamp(32px,4vw,50px); line-height:1.15; margin:10px 0 12px; }
+.guest-reviews .reviews-heading p { color:var(--muted); margin:0; }
+.guest-review-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.guest-review-card { background:#fffdf9; border:1px solid var(--line); border-radius:22px; padding:clamp(24px,3vw,38px); }
+.guest-review-stars { color:var(--olive-deep); letter-spacing:3px; font-size:19px; margin-bottom:14px; }
+.guest-review-card p { font-size:17px; line-height:1.65; margin:0 0 22px; color:var(--ink); }
+.guest-review-card footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; font-size:13px; color:var(--muted); }
+.guest-review-card footer strong { color:var(--ink); }
+.guest-reviews .reviews-source { margin-top:22px; font-size:14px; color:var(--muted); }
+.guest-reviews .reviews-source a { text-decoration:underline; text-underline-offset:3px; }
+@media (max-width:700px) { .guest-review-grid { grid-template-columns:1fr; } }
+
 .book { background:#f8f5ef; }
 .book-panel { border:1px solid var(--line); border-radius:30px; padding: clamp(34px,6vw,78px); display:grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px,6vw,90px); background:linear-gradient(145deg,rgba(255,255,255,.65),rgba(236,230,220,.65)); box-shadow:0 20px 60px rgba(65,70,58,.06); }
 .book-panel p { color:var(--muted); font-size:18px; }
@@ -965,6 +981,28 @@ footer { display:flex; justify-content:space-between; align-items:center; gap:25
       <div class="review-score reveal"><strong>9.0</strong><span>Booking.com property rating</span></div>
       <blockquote class="reveal">“The apartment was just so lovely in a beautiful spot. Everything was provided.”</blockquote>
       <a class="button secondary light reveal" href="https://www.booking.com/reviews/au/hotel/koola-beach-apartments-bargara.html" target="_blank" rel="noopener">Read verified reviews</a>
+    </section>
+
+
+    <section class="guest-reviews section" id="guest-reviews" aria-labelledby="guest-reviews-heading">
+      <div class="reviews-heading reveal">
+        <div class="eyebrow">GUEST EXPERIENCES</div>
+        <h2 id="guest-reviews-heading">What guests say about Apartment 101.</h2>
+        <p>Reviews specifically mentioning Koola Palms Apartment 101, shared by guests on Google.</p>
+      </div>
+      <div class="guest-review-grid">
+        <article class="guest-review-card reveal">
+          <div class="guest-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>CB praised the freshly renovated apartment, immaculate presentation, comfortable beds and ducted air conditioning. They also appreciated the friendly onsite managers and said they would stay again.</p>
+          <footer><strong>CB</strong><span>Google review · March 2026</span></footer>
+        </article>
+        <article class="guest-review-card reveal">
+          <div class="guest-review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p>Tamika enjoyed the modern interiors, family-friendly layout, spacious kitchen, comfortable lounge and generous patio overlooking the park. Secure parking and the helpful reception team were also highlights.</p>
+          <footer><strong>Tamika M.</strong><span>Google review · September 2026</span></footer>
+        </article>
+      </div>
+      <p class="reviews-source">Summaries of published guest reviews. <a href="https://koolabeach.com.au/apartments-and-bookings-2/koola-palms-101/#guest-reviews" target="_blank" rel="noopener noreferrer">Read the reviews on the Koola Beach Apartments website</a>.</p>
     </section>
 
     <section class="book section" id="book">
