@@ -664,6 +664,15 @@ footer { display:flex; justify-content:space-between; align-items:center; gap:25
   .book-panel { padding: 26px 20px; }
   .booking-assurance a { text-decoration: underline; text-underline-offset: 3px; }
 }
+
+/* Compact booking shortcut visible in the mobile header. */
+.mobile-book-cta { display:none; }
+@media (max-width:980px) {
+  .site-header { gap:10px; }
+  .mobile-book-cta { display:inline-flex; align-items:center; justify-content:center; margin-left:auto; min-height:44px; padding:9px 13px; background:var(--ink); color:var(--paper); border-radius:999px; text-align:center; font-size:12px; font-weight:700; line-height:1.2; }
+  .mobile-book-cta:focus-visible { outline:3px solid var(--olive-deep); outline-offset:3px; }
+}
+@media (max-width:380px) { .mobile-book-cta { padding:8px 10px; font-size:11px; } }
 </style>
   <link rel="preconnect" href="https://www.dropbox.com" crossorigin />
   <link rel="dns-prefetch" href="//www.dropbox.com" />
@@ -674,6 +683,7 @@ footer { display:flex; justify-content:space-between; align-items:center; gap:25
       <img class="brand-logo" src="assets/koola-logo.webp" alt="Koola Palms Bargara Beach" />
       <span class="brand-unit">APARTMENT 101</span>
     </a>
+    <a class="mobile-book-cta" href="#book" aria-label="Check availability for Apartment 101">Check availability</a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav id="main-nav" class="main-nav" aria-label="Main navigation">
       <a href="#stay">The apartment</a>
